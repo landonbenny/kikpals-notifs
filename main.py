@@ -54,11 +54,13 @@ def parse_title(title):
 
 def main():
     posts = get_new(sub='kikpals')
-    naughty = find_naughty(posts)
-    if len(naughty) > 0:
-        for post in naughty:
-            data = parse_title(post['title'])
-            print(data)
+    for post in posts:
+        print(parse_title(post['title']))
+    #naughty = find_naughty(posts)
+    #if len(naughty) > 0:
+    #    for post in naughty:
+    #        data = parse_title(post['title'])
+    #        print(data)
     
         
 
